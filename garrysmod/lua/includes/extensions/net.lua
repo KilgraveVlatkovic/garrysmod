@@ -29,6 +29,8 @@ function net.Incoming( len, client )
 	--
 	len = len - 16
 	
+	--Lag Compensate receivers so CurTime delays work with laggy clients
+	
 	client:LagCompensation(true)
 	
 	func( len, client )
