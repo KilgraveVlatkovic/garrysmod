@@ -29,7 +29,11 @@ function net.Incoming( len, client )
 	--
 	len = len - 16
 	
+	client:LagCompensation(true)
+	
 	func( len, client )
+	
+	client:LagCompensation(false)
 
 end
 
